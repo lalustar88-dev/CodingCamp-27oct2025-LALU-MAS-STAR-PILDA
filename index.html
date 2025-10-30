@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        
+        <div class="input-section">
+            <input type="text" placeholder="Add a todo..." id="taskInput">
+            <input type="date" id="dateInput">
+            <button id="addBtn">ADD</button>
+        </div>
+
+        <hr>
+
+        <div class="action-buttons">
+            <button id="filterBtn">FILTER</button>
+            <button id="deleteAllBtn">DELETE ALL</button>
+        </div>
+
+        <div class="table">
+            <div class="table-header">
+                <div>TASK</div>
+                <div>DUE DATE</div>
+                <div>STATUS</div>
+                <div>ACTIONS</div>
+            </div>
+            <div class="table-body" id="tableBody">
+                <!-- Tasks will appear here -->
+            </div>
+        </div>
+
+        <div class="no-task" id="noTask">No task found</div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <h3>Filter Tasks</h3>
+            <div class="filter-options">
+                <label>
+                    <input type="radio" name="filter" value="all" checked> Show All
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="pending"> PENDING Only
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="completed"> COMPLETED Only
+                </label>
+            </div>
+            <div class="modal-buttons">
+                <button id="applyFilterBtn">Apply</button>
+                <button id="cancelFilterBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
